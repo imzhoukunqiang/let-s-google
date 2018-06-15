@@ -11,6 +11,8 @@
   },
   "browser_action": {
     "default_icon" : "icon.png",
-    "default_title": "Switch Proxy"
+    "default_title": "Let's Google",
+    "default_popup": "pop.html"
   }
+
 }

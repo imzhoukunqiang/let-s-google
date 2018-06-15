@@ -79,7 +79,7 @@
 
   chrome.runtime.onInstalled.addListener(display_status);
 
-  chrome.browserAction.onClicked.addListener(switch_proxy);
+  //chrome.browserAction.onClicked.addListener(switch_proxy);
 
   chrome.runtime.onMessage.addListener(function(request, sender, sendResponse) {
     if (request && (request.id === "refresh")) {
