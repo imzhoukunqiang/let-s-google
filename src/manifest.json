@@ -3,16 +3,21 @@
   "description": "a chrome agent born for Google",
   "version": "1.0",
   "manifest_version": 2,
-  "permissions": ["storage","proxy"],
+  "permissions": [
+    "storage",
+    "tabs",
+    "proxy"
+  ],
   "options_page": "options.html",
   "background": {
-    "scripts": ["background.js"],
+    "scripts": [
+      "background.js"
+    ],
     "persistent": false
   },
   "browser_action": {
-    "default_icon" : "src/img/google.png",
+    "default_icon": "src/img/google.png",
     "default_title": "Let's Google",
     "default_popup": "pop.html"
   }
-
 }
