@@ -46,3 +46,8 @@ h1 {
     text-align:center;
 }
 
+.tips {
+    display: block;
+    color: #737373;
+    margin: 11px 50px 10px;
+}

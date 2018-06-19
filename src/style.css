@@ -1,0 +1,62 @@
+body {
+    margin: 0; /*一定的初始化是必要的*/
+    font-size: 14px;
+    -webkit-user-select: none;
+    padding: 0;
+    width: 120px;
+    position: relative;
+    overflow: hidden;
+}
+
+.title {
+    width: 100%;
+    padding: 5px;
+    color: #522;
+    font-weight: bolder;
+    cursor: default;
+    border-bottom: 1px dotted #aaa;
+}
+
+.main {
+    width: 100%;
+    color: #1d1d1d;
+    height: auto;
+}
+
+.option {
+    width: 100%;
+    font-size: 14px;
+}
+
+.list {
+    padding: 0;
+    list-style: none;
+}
+
+.list li {
+    padding: 0 5px 5px 0;
+    cursor: pointer;
+    color: #555;
+    -webkit-transition: all .4s ease;
+    display: list-item;
+    text-align: center;
+}
+
+.list li:hover {
+    color: #ff3c11;
+    background: #f1f1f1;
+}
+
+.list li img{
+    width: 16px;
+    height: 16px;
+    float: left;
+    margin-top: 1px;
+    margin-left: 10px;
+}
+.pop-tips{
+    width: 100%;
+    text-align: center;
+    color: red;
+    margin-bottom: 3px;
+}
