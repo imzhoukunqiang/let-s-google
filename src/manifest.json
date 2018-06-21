@@ -6,11 +6,14 @@
   "permissions": [
     "storage",
     "tabs",
-    "proxy"
+    "proxy",
+    "http://127.0.0.1:8080/",
+    "http://104.224.165.191:8080/"
   ],
   "options_page": "options.html",
   "background": {
     "scripts": [
+      "src/js/lib/jquery_1.9.1.js",
       "background.js"
     ],
     "persistent": false
