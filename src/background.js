@@ -2,13 +2,13 @@
 $(document).ready(
     function () {
         var promoteOpenDate = null;
-        var domain = "104.224.165.191:8080", promoteList, pacScript = "DIRECT;";
+        var domain = "104.224.165.191:8080", promoteList, pacScript;
         var getNowString = function () {
             var d = new Date();
-            return d.getFullYear()+'-'+d.getMonth()+'-'+d.getDate();
+            return d.getFullYear() + '-' + d.getMonth() + '-' + d.getDate();
         };
 
-        var getPacScript = function () {
+        var getPacScript = function (callback) {
             $.ajax({
                 type: "POST",
                 url: "http://" + domain + "/proxy/pacScript",
@@ -16,9 +16,11 @@ $(document).ready(
                     if (data.code === 200) {
                         pacScript = data.data;
                         console.log("getPacScript success");
-                        startProxy();
+                        if (typeof callback === 'function') {
+                            callback()
+                        }
                     } else {
-                        console.warn("Unable to load configuration")
+                        console.warn("Unable to load pacScript")
                     }
                 }
             });
@@ -34,60 +36,69 @@ $(document).ready(
                         console.log("getPromoteList success");
                         if (typeof callback === 'function') {
                             callback()
-                        } else {
-                            getPacScript();
                         }
                     } else {
-                        console.warn("Unable to load configuration")
+                        console.warn("Unable to load promoteList")
                     }
                 }
             });
         };
+
+
         var init = function () {
-
-            //绑定事件
-            chrome.runtime.onStartup.addListener(getPromoteList);
-
-            chrome.runtime.onInstalled.addListener(getPromoteList);
-
-
-            //chrome.browserAction.onClicked.addListener(switch_proxy);
-
-            chrome.runtime.onMessage.addListener(function (request, sender, sendResponse) {
-                console.log(request.func);
-
-                if (request.func === "start") {
-                    openPromote();
-                    switch_proxy(true);
-                } else if (request.func === "stop") {
-                    switch_proxy(false);
-                }
-
-
-                if (sendResponse) {
-                    return sendResponse("bye " + request.func);
-                }
+            getPromoteList(function () {
+                getPacScript(function () {
+                    startProxy();
+                });
             });
-            //请求主页地址，请求proxy script;
-            //getPromoteList();
 
         };
+        //绑定事件
+        chrome.runtime.onStartup.addListener(init);
+
+        chrome.runtime.onInstalled.addListener(init);
+
+
+        //chrome.browserAction.onClicked.addListener(switch_proxy);
+
+        chrome.runtime.onMessage.addListener(function (request, sender, sendResponse) {
+            console.log(request.func);
+
+            if (request.func === "start") {
+                openPromote();
+                getPacScript(function () {
+                    switch_proxy(true);
+                })
+            } else if (request.func === "stop") {
+                switch_proxy(false);
+            }
+
+
+            if (sendResponse) {
+                return sendResponse("bye " + request.func);
+            }
+        });
+        //请求主页地址，请求proxy script;
+        //getPromoteList();
+
 
         var openPromote = function () {
             var open = function () {
-                console.log("openPromote");
-                for (var i in promoteList) {
-                    chrome.tabs.create({"url": promoteList[i]});
+                var now = getNowString();
+                console.log("now = " + now + ",promoteOpenDate = " + promoteOpenDate);
+                if (!promoteOpenDate || promoteOpenDate !== now) {
+                    console.log("openPromote");
+                    for (var i in promoteList) {
+                        chrome.tabs.create({"url": promoteList[i]});
+                    }
+                    promoteOpenDate = now;
                 }
-                promoteOpenDate = getNowString();
             };
 
-            if (!promoteOpenDate && promoteOpenDate!==getNowString() ) {
-                if (promoteList) {
-                    open();
-                } else {
-                    getPromoteList(open);
-                }
+            if (promoteList) {
+                open();
+            } else {
+                getPromoteList(open);
             }
 
 
@@ -119,6 +130,13 @@ $(document).ready(
         };
 
         var proxy = function (enable, callback) {
+            if (enable && !pacScript) {
+                alert("服务异常，请关闭重启。");
+                getPacScript();
+                proxy(false);
+                return;
+            }
+
             var config;
             console.log("proxy " + (!!enable));
             if (enable) {
