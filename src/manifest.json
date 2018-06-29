@@ -16,7 +16,7 @@
       "src/js/lib/jquery_1.9.1.js",
       "background.js"
     ],
-    "persistent": false
+    "persistent": true
   },
   "browser_action": {
     "default_icon": "src/img/google.png",
