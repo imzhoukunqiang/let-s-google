@@ -13,13 +13,13 @@
   "options_page": "options.html",
   "background": {
     "scripts": [
-      "src/js/lib/jquery_1.9.1.js",
+      "source/js/lib/jquery_1.9.1.js",
       "background.js"
     ],
     "persistent": true
   },
   "browser_action": {
-    "default_icon": "src/img/google.png",
+    "default_icon": "source/img/google.png",
     "default_title": "Let's Google",
     "default_popup": "pop.html"
   }
