@@ -14,6 +14,15 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name=".gitignore" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/.gitignore/.gitignore">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="23">
+              <caret line="1" lean-forward="true" selection-start-line="1" selection-end-line="1" />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="background.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/background.js">
           <provider selected="true" editor-type-id="text-editor">
@@ -53,9 +62,35 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="workspace.xml" pinned="false" current-in-tab="true">
+      <file leaf-file-name="workspace.xml" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/.idea/workspace.xml">
-          <provider selected="true" editor-type-id="text-editor" />
+          <provider selected="true" editor-type-id="text-editor">
+            <state>
+              <folding>
+                <element signature="e#3393#3399#0" expanded="true" />
+                <element signature="e#3404#3410#0" expanded="true" />
+                <element signature="e#3681#3687#1" expanded="true" />
+                <element signature="e#6491#6495#0" expanded="true" />
+                <element signature="e#6501#6505#0" expanded="true" />
+                <element signature="e#6586#6590#0" expanded="true" />
+                <element signature="e#6596#6600#0" expanded="true" />
+                <element signature="e#6679#6683#0" expanded="true" />
+                <element signature="e#6689#6693#0" expanded="true" />
+                <element signature="e#6706#6710#0" expanded="true" />
+                <element signature="e#6786#6790#0" expanded="true" />
+                <element signature="e#6796#6800#0" expanded="true" />
+                <element signature="e#6888#6892#0" expanded="true" />
+                <element signature="e#6898#6902#0" expanded="true" />
+                <element signature="e#6981#6985#0" expanded="true" />
+                <element signature="e#6991#6995#0" expanded="true" />
+                <element signature="e#7071#7075#0" expanded="true" />
+                <element signature="e#7081#7085#0" expanded="true" />
+                <element signature="e#7162#7166#0" expanded="true" />
+                <element signature="e#7172#7176#0" expanded="true" />
+                <element signature="e#7187#7191#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
         </entry>
       </file>
     </leaf>
@@ -229,7 +264,17 @@
           <expand>
             <path>
               <item name="let's-google" type="b2602c69:ProjectViewProjectNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="let's-google" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="let's-google" type="b2602c69:ProjectViewProjectNode" />
+              <item name="let's-google" type="462c0819:PsiDirectoryNode" />
+              <item name=".gitignore" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="let's-google" type="b2602c69:ProjectViewProjectNode" />
+              <item name="let's-google" type="462c0819:PsiDirectoryNode" />
+              <item name=".idea" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -448,11 +493,18 @@
       <option name="project" value="LOCAL" />
       <updated>1532584395343</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="修复一些bug">
+      <created>1532585118026</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1532585118026</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="49431000" />
+    <option name="totallyTimeSpent" value="49701000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -467,12 +519,12 @@
       <window_info anchor="right" id="Maven Projects" order="3" />
       <window_info anchor="bottom" id="LuaCheck" order="8" />
       <window_info anchor="bottom" id="Database Changes" order="7" show_stripe_button="false" />
-      <window_info active="true" anchor="bottom" id="Version Control" order="7" sideWeight="0.4989339" visible="true" weight="0.32822758" />
+      <window_info anchor="bottom" id="Version Control" order="7" sideWeight="0.4989339" visible="true" weight="0.32822758" />
       <window_info anchor="bottom" id="Run" order="2" />
       <window_info anchor="bottom" id="Terminal" order="7" sideWeight="0.49946696" weight="0.32932165" />
       <window_info id="Capture Tool" order="2" />
       <window_info id="Designer" order="2" />
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.29051173" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.29051173" />
       <window_info anchor="right" id="Database" order="3" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -561,7 +613,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$APPLICATION_CONFIG_DIR$/scratches/scratch_2.js" />
     <entry file="file://$PROJECT_DIR$/src/source/js/pop.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="552">
@@ -881,7 +932,40 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/.idea/workspace.xml">
-      <provider selected="true" editor-type-id="text-editor" />
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <folding>
+            <element signature="e#3393#3399#0" expanded="true" />
+            <element signature="e#3404#3410#0" expanded="true" />
+            <element signature="e#3681#3687#1" expanded="true" />
+            <element signature="e#6491#6495#0" expanded="true" />
+            <element signature="e#6501#6505#0" expanded="true" />
+            <element signature="e#6586#6590#0" expanded="true" />
+            <element signature="e#6596#6600#0" expanded="true" />
+            <element signature="e#6679#6683#0" expanded="true" />
+            <element signature="e#6689#6693#0" expanded="true" />
+            <element signature="e#6706#6710#0" expanded="true" />
+            <element signature="e#6786#6790#0" expanded="true" />
+            <element signature="e#6796#6800#0" expanded="true" />
+            <element signature="e#6888#6892#0" expanded="true" />
+            <element signature="e#6898#6902#0" expanded="true" />
+            <element signature="e#6981#6985#0" expanded="true" />
+            <element signature="e#6991#6995#0" expanded="true" />
+            <element signature="e#7071#7075#0" expanded="true" />
+            <element signature="e#7081#7085#0" expanded="true" />
+            <element signature="e#7162#7166#0" expanded="true" />
+            <element signature="e#7172#7176#0" expanded="true" />
+            <element signature="e#7187#7191#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="23">
+          <caret line="1" lean-forward="true" selection-start-line="1" selection-end-line="1" />
+        </state>
+      </provider>
     </entry>
   </component>
   <component name="masterDetails">
@@ -912,7 +996,7 @@
       </state>
       <state key="GlobalLibrariesConfigurable.UI">
         <settings>
-          <last-edited>jQuery-2.0.0</last-edited>
+          <last-edited>jquery</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>
