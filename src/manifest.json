@@ -10,7 +10,7 @@
     "http://127.0.0.1:8080/",
     "http://104.224.165.191:8080/"
   ],
-  "options_page": "options.html",
+  "options_page": "source/options.html",
   "background": {
     "scripts": [
       "source/js/lib/jquery_1.9.1.js",
@@ -21,6 +21,6 @@
   "browser_action": {
     "default_icon": "source/img/google.png",
     "default_title": "Let's Google",
-    "default_popup": "pop.html"
+    "default_popup": "source/pop.html"
   }
 }
