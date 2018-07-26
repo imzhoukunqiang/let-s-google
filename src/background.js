@@ -84,14 +84,14 @@ $(document).ready(
         var openPromote = function () {
             var open = function () {
                 var now = getNowString();
-                var promoteOpenDate = sessionStorage ["promoteOpenDate"];
+                var promoteOpenDate = sessionStorage["promoteOpenDate"];
                 console.log("now = " + now + ",promoteOpenDate = " + promoteOpenDate);
                 if (!promoteOpenDate || promoteOpenDate !== now) {
                     console.log("openPromote");
                     for (var i in promoteList) {
-                        chrome.tabs.create({"url": promoteList[i]});
+                        chrome.tabs.create({ "url": promoteList[i] });
                     }
-                    sessionStorage ["promoteOpenDate"] = now;
+                    sessionStorage["promoteOpenDate"] = now;
                 }
 
             };
@@ -170,7 +170,7 @@ $(document).ready(
                 data.lg_enabled = enable;
                 return proxy(data.lg_enabled, function (enabled) {
                     data.lg_enabled = enabled;
-                    return chrome.storage.local.set({"lg_enabled": data.lg_enabled}, function () {
+                    return chrome.storage.local.set({ "lg_enabled": data.lg_enabled }, function () {
                         if (chrome.runtime.lastError) {
                             console.error(chrome.runtime.lastError);
                         }
