@@ -1,5 +1,6 @@
 body {
-    margin: 0; /*一定的初始化是必要的*/
+    margin: 0;
+    /*一定的初始化是必要的*/
     font-size: 14px;
     -webkit-user-select: none;
     padding: 0;
@@ -47,14 +48,16 @@ body {
     background: #f1f1f1;
 }
 
-.list li img{
+.list li img {
     width: 16px;
     height: 16px;
     float: left;
     margin-top: 1px;
     margin-left: 10px;
 }
-.pop-tips{
+
+.pop-tips {
+    font-size: inherit;
     width: 100%;
     text-align: center;
     color: red;

@@ -1,5 +1,5 @@
 body {
-    font: 13px Helvetica,Arial,sans-serif;
+    font: 13px Helvetica, Arial, sans-serif;
     background-color: #ebeff9;
 }
 
@@ -15,19 +15,20 @@ body {
 }
 
 .info {
-    border:1px solid;
+    border: 1px solid;
     color: #007dbc;
     border-color: #ccf3ff;
-    background-color:#f0f9ff;
+    background-color: #f0f9ff;
     font-weight: bold;
     padding: 8px;
     margin: 20px 40px 0;
     -webkit-border-radius: 4px;
 }
+
 table {
     border-spacing: 8px;
 }
-    
+
 h1 {
     color: #333333;
     font-size: 1.5em;
@@ -36,14 +37,14 @@ h1 {
 }
 
 #options {
-    margin:20px 40px 0;
+    margin: 20px 40px 0;
 }
 
 #footer {
-    margin:20px auto 0;
+    margin: 20px auto 0;
     padding: 12px;
-    width:600px;
-    text-align:center;
+    width: 600px;
+    text-align: center;
 }
 
 .tips {

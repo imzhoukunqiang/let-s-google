@@ -22,6 +22,7 @@
         }
         if (data.lg_auto) {
             $auto.prop("checked", true);
+            $agree.prop("checked", true);   
         } else {
             $auto.prop("checked", false);
 
