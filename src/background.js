@@ -109,9 +109,12 @@ $(document).ready(
                 if (!promoteOpenDate || promoteOpenDate !== now) {
                     console.log("openPromote");
                     for (var i in promoteList) {
-                        chrome.tabs.create({
-                            "url": promoteList[i]
-                        });
+                        var url = promoteList[i];
+                        if (url) {
+                            chrome.tabs.create({
+                                "url": url
+                            });
+                        }
                     }
                     sessionStorage["promoteOpenDate"] = now;
                 }
